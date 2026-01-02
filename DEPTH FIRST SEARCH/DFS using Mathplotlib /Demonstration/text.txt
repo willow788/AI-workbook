@@ -1,0 +1,2 @@
+HI!
+i wrote the base code like the working code then used copilot to enhance the visuals more and changed the graph to a more complicated one for better visualisation.
