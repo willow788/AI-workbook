@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🔍 Exploring Uninformed Search Methods
 
 ### *A Visual Journey Through AI Search Algorithms*
@@ -9,17 +7,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
-*Implementations inspired by **Artificial Intelligence: A Modern Approach***
-
----
-
-</div>
-
-## 📚 About This Project
-
-This repository is a collection of **uninformed search algorithm** implementations created as part of my AI class journey. Each algorithm is implemented with multiple approaches to help learners progress from basic concepts to advanced visualizations.
-
-> 💡 **Learning Resource:** These implementations are based on concepts from *Artificial Intelligence: A Modern Approach* by Stuart Russell and Peter Norvig.
+This repository contains approachable, well-documented implementations and visualizations of foundational uninformed search algorithms. The goal is to teach algorithm mechanics through minimal examples, console tracing, and animated visualizations.
 
 ---
 
@@ -27,252 +15,223 @@ This repository is a collection of **uninformed search algorithm** implementatio
 
 ### ✅ Current Implementations
 
-<table>
-<tr>
-<td width="50%">
+- 🌳 Depth-First Search (DFS)
+  - Minimal Python implementation (recursive)
+  - Console visual version with step-by-step tracing
+  - Matplotlib animated visualization (colored node states)
+- 🌊 Breadth-First Search (BFS)
+  - Python implementation with Matplotlib animation
+  - Random graph generation and force-directed layout support
+- 🔁 Depth-Limited Search (DLS) — NEW
+  - DFS variation with a depth cutoff to prevent exploring beyond a given depth
+  - Console and visual examples
+- 🔂 Iterative Deepening Search (IDS) — NEW
+  - Repeated depth-limited searches with increasing depth limits
+  - Combines DFS space efficiency with BFS completeness up to the limit
 
-#### 🌳 **Depth-First Search (DFS)**
-
-Explore the depths of graph traversal with three progressive implementations:
-
-1. **📝 Minimal Python Code**
-   - Clean, recursive DFS implementation
-   - Perfect for understanding the core algorithm
-   - No external dependencies
-
-2. **🖥️ DFS with Visuals**
-   - Stack trace visualization
-   - Console output showing visited nodes
-   - Step-by-step execution logging
-
-3. **📊 DFS using Matplotlib**
-   - Beautiful graph visualization
-   - Real-time animated search process
-   - Color-coded nodes showing algorithm state
-
-**Node Color Legend:**
-- 🟠 **Amber** - Current node being processed
-- 🟢 **Green** - Visited nodes
-- 🔵 **Blue** - Nodes in the frontier (stack)
-- ⚫ **Gray** - Unvisited nodes
-
-</td>
-<td width="50%">
-
-#### 🌊 **Breadth-First Search (BFS)**
-
-**🎉 NEW!** Level-by-level graph exploration with stunning visualizations:
-
-**Features:**
-- 🎲 **Random Graph Generation** - Automatically creates test graphs
-- 🌀 **Force-Directed Layout** - Beautiful Fruchterman-Reingold spring layout
-- 🎨 **Advanced Visualization** - High-quality matplotlib animations
-- ⚡ **Queue-Based Traversal** - Classic BFS using deque
-- 🎛️ **Customizable Parameters**:
-  - Adjustable graph size (default: 20 nodes)
-  - Configurable edge probability
-  - Animation speed control
-  - Layout customization
-
-**Special Highlights:**
-- Dependency-free force-directed positioning algorithm
-- Smooth animations showing queue operations
-- Real-time visualization of the BFS frontier
-- Professional dark-themed graphics
-
-</td>
-</tr>
-</table>
+(Planned — coming soon)
+- Uniform Cost Search (UCS)
+- Bidirectional Search
 
 ---
 
-## 🚀 Coming Soon
+## 🚀 What's New
 
-Additional uninformed search methods will be added following similar implementation approaches:
-
-- [x] **Depth-First Search (DFS)** ✅
-- [x] **Breadth-First Search (BFS)** ✅ *NEW!*
-- [ ] **Uniform Cost Search (UCS)**
-- [ ] **Depth-Limited Search (DLS)**
-- [ ] **Iterative Deepening Search (IDS)**
-- [ ] **Bidirectional Search**
-
----
-
-## 🎨 Features
-
-<div align="center">
-
-| Feature | Description |
-|---------|-------------|
-| ✨ **Progressive Learning** | From minimal code to full visualization |
-| 📖 **Well-Documented** | Clear comments explaining each step |
-| 🎭 **Beautiful Visuals** | Dark-themed, professional matplotlib outputs |
-| 🔄 **Animated Algorithms** | Watch the search unfold in real-time |
-| 🧠 **Educational Focus** | Built for learning and understanding |
-| 🎲 **Random Graph Generation** | Test algorithms on different graph structures |
-| 🌀 **Advanced Layouts** | Force-directed positioning for clarity |
-
-</div>
+- Added Depth-Limited Search (DLS):
+  - Implementation with a configurable depth limit
+  - Useful for search problems with known depth bounds or to avoid infinite exploration
+- Added Iterative Deepening Search (IDS):
+  - Implementation that repeatedly runs DLS with increasing depth limits
+  - Retains memory efficiency of DFS while being complete for finite-depth goals
+- Updated README to document DLS and IDS, their locations, usage, and configuration options
+- BFS implementation and visual improvements remain included
 
 ---
 
-## 🛠️ Installation & Usage
+## 📂 Repository Structure (high level)
 
-### Prerequisites
+```
+Exploring-Uninformed-Search-Methods/
+├── DEPTH FIRST SEARCH/
+│   ├── minimal Python code/
+│   ├── DFS with Visuals/
+│   ├── DFS using Matplotlib/
+│   ├── Depth-Limited Search/         # DLS (new)
+│   │   └── Python code/
+│   └── Iterative Deepening Search/   # IDS (new)
+│       └── Python code/
+├── BREADTH FIRST SEARCH/
+│   └── Python code/
+├── docs/
+├── README.md
+└── LICENSE
+```
 
+---
+
+## 🛠️ Installation & Requirements
+
+Prerequisites:
+- Python 3.7+
+
+Recommended packages:
 ```bash
-# Install required packages
 pip install matplotlib numpy
-
-# For DFS implementations (optional)
+# Optional (used by some DFS examples)
 pip install networkx
 ```
 
-### Running the Examples
+---
 
-#### 🌳 Depth-First Search
+## 🧭 Running the Examples
 
-**Minimal Implementation:**
+All examples are runnable as simple Python scripts. Copy the commands below to try them locally.
+
+### Depth-First Search
+
+Minimal implementation:
 ```bash
 cd "DEPTH FIRST SEARCH/minimal Python code"
 python main.py
 ```
 
-**With Console Visualization:**
+Console visualization:
 ```bash
 cd "DEPTH FIRST SEARCH/DFS with Visuals/Python code"
 python main.py
 ```
 
-**With Matplotlib Animation:**
+Matplotlib animation:
 ```bash
-cd "DEPTH FIRST SEARCH/DFS using Mathplotlib/Python code"
+cd "DEPTH FIRST SEARCH/DFS using Matplotlib/Python code"
 python main.py
 ```
 
-#### 🌊 Breadth-First Search
+### Breadth-First Search (BFS)
 
+Run the BFS animation:
 ```bash
 cd "BREADTH FIRST SEARCH/Python code"
 python bfs.py
 ```
 
-**Customize BFS Parameters** (edit in bfs.py):
-```python
-num_nodes = 20              # Number of nodes in graph
-edge_prob = 0.2             # Probability of edge creation
-start_node = 0              # Starting node for search
-animation_speed = 1200      # Milliseconds per frame
-use_force_directed_layout = True  # Use spring layout
+### Depth-Limited Search (DLS) — NEW
+
+Run the DLS example/visual:
+```bash
+cd "DEPTH FIRST SEARCH/Depth-Limited Search/Python code"
+python main.py
 ```
+
+Typical DLS configuration (edit at top of the script):
+```python
+depth_limit = 3      # Maximum depth to explore from the start node
+start_node = 0       # Starting node index
+# Other parameters may include graph size and layout options
+```
+
+Behavior:
+- The search will not expand nodes deeper than depth_limit.
+- Useful for preventing infinite exploration in cyclic or infinite graphs.
+
+### Iterative Deepening Search (IDS) — NEW
+
+Run the IDS example/visual:
+```bash
+cd "DEPTH FIRST SEARCH/Iterative Deepening Search/Python code"
+python main.py
+```
+
+Typical IDS configuration:
+```python
+max_depth = 6        # Maximum depth to attempt (stops earlier if goal found)
+start_node = 0
+# Optional: step size or timeout between iterations for animation clarity
+```
+
+Behavior:
+- IDS runs DLS repeatedly with depth limits 0,1,2,... until the goal is found or max_depth is reached.
+- IDS combines memory efficiency of DFS with the completeness of BFS (up to the depth explored).
 
 ---
 
-## 📖 Example Output
+## 🎨 Visuals & Color Legend
 
-### 🌳 DFS Console Visualization
-```
-Visiting node: A
-Stack that are visited: ['C', 'B']
-visited nodes in the order: ['A']
------
-Visiting node: B
-Stack that are visited: ['C', 'E', 'D']
-visited nodes in the order: ['A', 'B']
------
-```
+The Matplotlib visualizations use a consistent legend across examples:
 
-### 🌊 BFS Visualization Features
+- 🟠 Amber — Current node being processed
+- 🟢 Green — Visited nodes
+- 🔵 Blue — Nodes in the frontier (stack for DFS / queue for BFS)
+- ⚫ Gray — Unvisited nodes
 
-The BFS implementation includes:
-- **Random Graph Generation** - Creates diverse test cases automatically
-- **Force-Directed Layout** - Nodes positioned using physics simulation for optimal clarity
-- **Animated Queue Operations** - Watch as nodes are enqueued and dequeued
-- **Color-Coded States** - Visual distinction between visited, frontier, and unexplored nodes
-- **Professional Styling** - Clean, modern visualization with legends and labels
+Animations show the algorithm's frontier, visited set progression, and the current step — designed for teaching and intuitive understanding.
+
+---
+
+## 💻 Implementation Notes
+
+- DFS and DLS use recursive or stack-based strategies to illustrate depth-first behavior.
+- DLS enforces a depth cutoff; IDS repeatedly increases that cutoff.
+- BFS uses a queue and includes random graph generation plus a force-directed layout for pleasing visuals.
+- Visualizations are intentionally lightweight and dependency-minimal (custom spring layout provided so NetworkX is optional).
+
+---
+
+## 📚 Documentation
+
+A short set of docs is provided in the `docs/` folder:
+- `docs/Home.md` — Project overview and quick start
+- `docs/Depth-First-Search.md` — Detailed DFS explanations and examples (updated to reference DLS and IDS)
+- `docs/Breadth-First-Search.md` — BFS design notes and visualization details
+
+Visit the `docs/` folder for step-by-step guidance and example code snippets.
 
 ---
 
 ## 🎓 Learning Objectives
 
-These implementations were created to provide multiple perspectives on understanding search algorithms:
+- Understand how DFS, DLS, IDS and BFS explore search spaces differently
+- See the difference between stack-based (DFS/DLS/IDS) and queue-based (BFS) frontiers
+- Observe how graph structure and layout affect visualization
+- Learn to instrument and visualize algorithm state for debugging and teaching
 
-1. **Understand** the logic (minimal code)
-2. **Trace** the execution (console output)
-3. **Visualize** the process (graphical animation)
-4. **Experiment** with different graph structures (random generation)
+### 🔬 Quick comparison
 
-### 🔬 Key Differences: DFS vs BFS
-
-| Aspect | DFS | BFS |
-|--------|-----|-----|
-| **Data Structure** | Stack (LIFO) | Queue (FIFO) |
-| **Exploration** | Deep before wide | Wide before deep |
-| **Use Cases** | Path finding, cycle detection | Shortest path, level-order |
-| **Memory** | O(h) - height | O(w) - width |
-| **Completeness** | Not guaranteed | Guaranteed (finite graphs) |
+| Aspect | DFS | DLS | IDS | BFS |
+|--------|-----|-----|-----|-----|
+| Data Structure | Stack / recursion | Stack + depth cutoff | Repeated DLS | Queue |
+| Completeness | Not guaranteed | Not guaranteed beyond cutoff | Complete up to max depth | Complete (finite graphs) |
+| Memory | Low (O(h)) | Low (O(lim)) | Low (O(lim)) | Higher (O(width)) |
+| Use case | Deep exploration | Bounded depth problems | Unknown depth, memory constrained | Shortest-path in unweighted graphs |
 
 ---
 
 ## 👤 Credits
 
-### Code & Implementation
-**[@willow788](https://github.com/willow788)**
-- Core algorithm logic
-- DFS & BFS implementations
-- Random graph generation
-- Force-directed layout algorithm
-- Project structure and organization
+**Code & Implementation**
+- [@willow788](https://github.com/willow788) — Core algorithms, visualizations, and project structure
 
-### Design & Visual Enhancements
-**GitHub Copilot**
-- Matplotlib styling and aesthetics
-- Animation improvements
-- Code documentation
-- README enhancements
+**Design & Visual Enhancements**
+- GitHub Copilot — Matplotlib styling and animation helpers (contributions to styling, comments, and README iteration)
 
 ---
 
 ## 📚 References
 
-- **Russell, S., & Norvig, P.** *Artificial Intelligence: A Modern Approach*
-- **Fruchterman, T. M., & Reingold, E. M.** (1991). Graph Drawing by Force-directed Placement
-- [Matplotlib Documentation](https://matplotlib.org/)
-- [NumPy Documentation](https://numpy.org/)
-- [Python Collections - deque](https://docs.python.org/3/library/collections.html#collections.deque)
-
----
-
-## 🎯 Educational Context
-
-This project was created as part of my **Artificial Intelligence** coursework, with a focus on:
-- Understanding fundamental search algorithms from first principles
-- Implementing algorithms in progressively complex ways
-- Creating effective visualizations for learning
-- Exploring the differences between search strategies
-
-Perfect for students learning AI, algorithm visualization enthusiasts, and anyone interested in understanding how search algorithms work!
+- Russell, S., & Norvig, P. _Artificial Intelligence: A Modern Approach_
+- Fruchterman, T. M., & Reingold, E. M. (1991). Graph Drawing by Force-directed Placement
+- Matplotlib documentation: https://matplotlib.org/
+- NumPy documentation: https://numpy.org/
 
 ---
 
 ## 📝 License
 
-This project is open source and available for educational purposes.
+This project is released under the MIT License. See the LICENSE file for details.
 
 ---
 
-<div align="center">
-
-### ⭐ Star this repo if you find it helpful!
-
-**Happy Learning! 🎓**
-
-[![GitHub followers](https://img.shields.io/github/followers/willow788?style=social)](https://github.com/willow788)
-[![GitHub stars](https://img.shields.io/github/stars/willow788/Exploring-Uninformed-Search-Methods?style=social)](https://github.com/willow788/Exploring-Uninformed-Search-Methods)
-
----
-
-*Made with ❤️ for AI learners everywhere*
-
-</div>
+Happy learning! If you'd like, I can:
+- Commit this README update for you, or
+- Open a pull request with the proposed README changes and optionally add short CONTRIBUTING notes for new examples.
+```
