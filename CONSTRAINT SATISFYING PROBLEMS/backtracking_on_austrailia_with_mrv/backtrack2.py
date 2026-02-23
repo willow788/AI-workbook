@@ -45,14 +45,14 @@ class Graph:
                 for color_id in range(1, no_of_available_colors + 1):
                     if graph.is_safe(color, node, color_id):
                         legal_values_count += 1
-                        if legal_values_count < min_remaining_values:
+                if legal_values_count < min_remaining_values:
 
                             #if the legal values is less than min values:
                             #we will uodate the min remaining vales to the legal values count
                             #also we will update the selected node to the current node
 
-                            min_remaining_values = legal_values_count
-                            selected_node = node
+                     min_remaining_values = legal_values_count
+                     selected_node = node
         return selected_node
     
     #function to solve the graph coloring problem using backtracking algorithm with mrv heuristic
